@@ -1,0 +1,11 @@
+---
+
+- hosts: droplets
+  remote_user: root
+  sudo: yes
+  gather_facts: no
+
+  tasks:
+    - name: touch file
+      shell: mkdir -p /opt/ansible-text/hello-ansible/ && echo "Hello Ansible" >> /opt/ansible-text/hello-ansible/hello-ansible.txt 
+
