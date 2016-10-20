@@ -1,0 +1,11 @@
+---
+
+- hosts: droplets
+  remote_user: root
+  sudo: yes
+  gather_facts: no
+
+  tasks:
+    - name: touch file
+      shell: rm -rf /opt/ansible-text/ 
+
